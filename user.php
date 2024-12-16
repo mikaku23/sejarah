@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['status_login']){
+if(!$_SESSION['status_login2']){
     header("location:pilih.php");
 }
 ?>
@@ -69,16 +69,16 @@ if(!$_SESSION['status_login']){
                 <?php
                 if (isset($_GET['page'])) {
                     if ($_GET['page'] == 'dashboard') {
-                        include "tampilan/dashboard.php";
+                        include "tampilan2/dashboard.php";
                     } elseif ($_GET['page'] == 'detail') {
-                        include "tampilan/detail.php";
+                        include "tampilan2/detail.php";
                     } elseif ($_GET['page'] == 'create') {
-                        include "tampilan/create.php";
-                    } elseif ($_GET['page'] == 'edit') {
-                        include "tampilan/edit.php";
+                        include "tampilan2/create.php";
+                    } elseif ($_GET['page'] == 'register') {
+                        include "tampilan2/register.php";
                     }
                 } else {
-                    include "tampilan/dashboard.php";
+                    include "tampilan2/dashboard.php";
                 }
                 ?>
             </section>

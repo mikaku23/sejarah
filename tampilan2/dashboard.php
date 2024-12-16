@@ -1,4 +1,3 @@
-
 <style>
     /* Gaya untuk gambar */
     img {
@@ -16,14 +15,7 @@
 </style>
 <!-- Default box -->
 <div class="card-body">
-    <div class="row">
-        <!-- Tombol Tambah Data -->
-        <div class="col-md-4">
-            <a href="index.php?page=create&title=create" class="btn btn-success btn-md">
-                <i class="fas fa-plus"></i> Tambah Data
-            </a>
-        </div>
-    </div>
+
     <div class="row pt-3">
         <div class="col">
             <!-- Tabel Data -->
@@ -70,7 +62,7 @@
                         <th>No</th>
                         <th>Nama</th>
                         <th>Data</th>
-                        <th>Aksi</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -89,18 +81,14 @@
                                     <td>".$data['nama']."</td>
                                     
                                   <td>
-    <a href='index.php?title=view&page=detail&iddata=$data[iddata]'>
+    <a href='user.php?title=view&page=detail&iddata=$data[iddata]'>
         <img src='data:$tipe_gambar;base64,$gambar' 
-             alt='Gambar' 
+             alt='Klik untuk melihat Data' 
              style='width:100px; height:auto; cursor: pointer;'>
     </a>
 </td>
 
-                                    <td>
-                                 
-                                        <a href='index.php?title=edit&page=edit&id=$data[iddata]' class='btn btn-outline-warning btn-sm'><i class='fas fa-pencil-alt'></i></a>
-                                        <a href='db/db.data.php?proses=hapus&id=$data[iddata]' class='btn btn-outline-danger btn-sm'><i class='far fa-trash-alt'></i></a>
-                                    </td>
+
                                 </tr>";
                             $no++;
                         }
